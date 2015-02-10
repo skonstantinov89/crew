@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Login</title>
+
+
+  </head>
+  <body>
+    <meta name="viewport" content="width=1000, initial-scale=1.0, maximum-scale=1.0">
+
+    <!-- Loading Bootstrap -->
+    <link href="{% static "dist/css/vendor/bootstrap.min.css"%}" rel="stylesheet">
+    <link href="{% static "dist/css/vendor/bootstrap-3-vert-offset-shim.css"%}" rel="stylesheet">
+
+    <!-- Loading Flat UI -->
+    <link href="{% static "dist/css/flat-ui.css" %}" rel="stylesheet">
+    <link href="{% static "docs/assets/css/demo.css" %}" rel="stylesheet">
+
+    <link rel="shortcut icon" href="img/favicon.ico">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+      <script src="dist/js/vendor/html5shiv.js"></script>
+      <script src="dist/js/vendor/respond.min.js"></script>
+    <![endif]-->
+        <div class="login-form col-lg-4 col-md-offset-4 vert-offset-top-6">
+          <h4 class='col-md-offset-2'> Вход в системата </h4>
+          <form method='POST'>
+          {% csrf_token %}
+            <div class="form-group">
+              <input type="text" class="form-control login-field" value="" placeholder="Потребителско име" id="login-name" name='username'/>
+              <label class="login-field-icon fui-user" for="login-name"></label>
+            </div>
+
+            <div class="form-group">
+              <input type="password" class="form-control login-field" value="" placeholder="Парола" id="login-pass" name='password' />
+              <label class="login-field-icon fui-lock" for="login-pass"></label>
+            </div>
+
+            <button class="btn btn-primary btn-lg btn-block" type='submit'>Вход</button>
+          </form>
+          </div>
+    <script src="{% static "dist/js/vendor/jquery.min.js" %}"></script>
+   <script>
+   {% if error %}
+        $('.form-group').addClass('has-error');
+        alert('Неправилно име или парола! Въведете отново')
+   {% endif %}
+   </script>
+
+    <script src="{% static "dist/js/vendor/video.js" %}"></script>
+    <script src="{% static "dist/js/flat-ui.min.js" %}"></script>
+    <script src="{% static "docs/assets/js/application.js" %}"></script>
+
+    <script>
+      videojs.options.flash.swf = "{% static "dist/js/vendors/video-js.swf" %}"
+    </script>
+  </body>
+</html>

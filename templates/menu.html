@@ -1,0 +1,72 @@
+
+
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head>
+  <title>Crew recruitment platform</title>
+</head>
+<body>
+
+<meta name="viewport" content="width=1000, initial-scale=1.0, maximum-scale=1.0">
+
+    <!-- Loading Bootstrap -->
+    <link href="{% static "dist/css/vendor/bootstrap.min.css"%}" rel="stylesheet">
+    <link href="{% static "dist/css/vendor/jquery-ui.min.css"%}" rel="stylesheet">
+    <link href="{% static "dist/css/vendor/bootstrap-3-vert-offset-shim.css"%}" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+
+    <!-- Loading Flat UI -->
+    <link href="{% static "dist/css/flat-ui.css" %}" rel="stylesheet">
+    <link href="{% static "docs/assets/css/demo.css" %}" rel="stylesheet">
+
+    <link rel="shortcut icon" href="img/favicon.ico">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+      <script src="dist/js/vendor/html5shiv.js"></script>
+      <script src="dist/js/vendor/respond.min.js"></script>
+    <![endif]-->
+
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/home">Crew recruitment platform</a>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/persons/new">Добавяне на нов персонал</a></li>
+        <li><a href="/persons/search">Търсене на персонал</a></li>
+        <li><a href="#">Справка</a></li>
+        <li><a href="/logout">Изход</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+    <script src="{% static "dist/js/vendor/jquery.min.js" %}"></script>
+    <script src="{% static "dist/js/vendor/jquery-ui.min.js" %}"></script>
+    <script src="{% static "dist/js/vendor/bootstrap.min.js" %}"></script>
+    <script src="{% static "dist/js/vendor/video.js" %}"></script>
+    <script src="{% static "dist/js/flat-ui.min.js" %}"></script>
+    <script src="{% static "docs/assets/js/application.js" %}"></script>
+
+    <script>
+      videojs.options.flash.swf = "dist/js/vendors/video-js.swf"
+    </script>
+{% block content %}
+  
+{% endblock content %}
+</body>
+</html>
+
