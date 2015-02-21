@@ -36,11 +36,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'cv_documents',
-    'languages',
     'persons',
-    'positions',
-    'other_docs',
     'crispy_forms',
 )
 
@@ -67,7 +63,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'crewdb',
         'USER': 'postgres',
-        'PASSWORD': 'kajimida',
+        'PASSWORD': '1',
         'HOST': '127.0.0.1',
         'PORT': '5432',
     }

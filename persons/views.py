@@ -18,7 +18,6 @@ class SetOperations(View):
 			context = RequestContext(request)
 			
 			return render_to_response('persons/new.html', context)
-
 		@method_decorator(login_required)
 		def post(self,request):
 			pass

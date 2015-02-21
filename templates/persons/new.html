@@ -6,6 +6,7 @@
 </div>
 <br/>
 <form method='post' >
+	{% csrf_token %}
 	<div class='form-group col-md-6 col-md-offset-3'>
 		<input type='text' class='form-control' id='name' name='name' placeholder='Име'/>
 			<input type='text' class='form-control' id='sirname' name='sirname' placeholder='Презиме'/>
@@ -16,15 +17,13 @@
 		        <option value="2">Немски</option>
 		        <option value="3">Руски</option>
 		      </select>
-				<div class='form-inline' align='center'>
+				<div class='form-inline col-md-offset-2' align='center'>
 					<input type='text' class='form-control col-md-3 datepickerField' id='dateFrom' name='dateFrom' placeholder='От дата '/>
 					<input type='text' class='form-control col-md-3 datepickerField' id='dateTo' name='dateTo' placeholder='До дата'/> 
 				</div>
+				<br/>
 		    	<label> Автобиография 
-		<input type='file' id='cvFile' name='cvFile' placeholder='Автобиография'/>
-		</label>
-		<label> Други документи
-		<input type='file' id='docsFile1' name='docsFile1' placeholder='Документи'/>
+		<input type='file' id='cvFile' name='cvFile'/>
 		</label>
 
 		<button type='submit' class="btn btn-block btn-lg btn-primary" name='submit'> Добави </button>

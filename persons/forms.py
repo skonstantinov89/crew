@@ -34,6 +34,6 @@ class newPerson(forms.ModelForm):
 	        Field('sirname', css_class='form-control'),
 	        Field('familyname', css_class='form-control'),
 
-	        Submit('submit', 'Submit1', css_class='btn btn-primary btn-lg btn-block'),
+	        Submit('submit', 'Submit', css_class='btn btn-primary btn-lg btn-block'),
     )
     		
